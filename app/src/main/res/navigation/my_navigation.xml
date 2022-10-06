@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/home_frament">
+
+    <fragment
+        android:id="@+id/home_frament"
+        android:name="cmr.mesmenj.wallet_suividubudget.Home_frament"
+        android:label="Acceuil"
+        tools:layout="@layout/fragment_home_frament" >
+        <action
+            android:id="@+id/action_home_frament_to_fragmentCalcul"
+            app:destination="@id/fragmentCalcul" />
+        <action
+            android:id="@+id/action_home_frament_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCalcul"
+        android:name="cmr.mesmenj.wallet_suividubudget.FragmentCalcul"
+        android:label="fragment_calcul"
+        tools:layout="@layout/fragment_calcul" >
+        <action
+            android:id="@+id/action_fragmentCalcul_to_home_frament"
+            app:destination="@id/home_frament" />
+        <action
+            android:id="@+id/action_fragmentCalcul_to_categorieFragment"
+            app:destination="@id/categorieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categorieFragment"
+        android:name="cmr.mesmenj.wallet_suividubudget.CategorieFragment"
+        android:label="Categorie"
+        tools:layout="@layout/fragment_categorie" >
+        <action
+            android:id="@+id/action_categorieFragment_to_fragmentCalcul"
+            app:destination="@id/fragmentCalcul" />
+        <action
+            android:id="@+id/action_categorieFragment_to_itemCategorie"
+            app:destination="@id/itemCategorie" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemCategorie"
+        android:name="cmr.mesmenj.wallet_suividubudget.ItemCategorie"
+        android:label="fragment_item_categorie"
+        tools:layout="@layout/fragment_item_categorie" >
+        <action
+            android:id="@+id/action_itemCategorie_to_categorieFragment"
+            app:destination="@id/categorieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectif"
+        android:name="cmr.mesmenj.wallet_suividubudget.BudgetFragment"
+        android:label="Acceuil"
+        tools:layout="@layout/fragment_budget" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="cmr.mesmenj.wallet_suividubudget.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_home_frament"
+            app:destination="@id/home_frament" />
+    </fragment>
+</navigation>

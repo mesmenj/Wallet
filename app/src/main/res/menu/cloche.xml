@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cloche"
+        android:title="COMPTES" />
+    <item
+        android:id="@+id/objectif"
+        android:title="BUDGET ET OBJECTIFS"/>
+
+</menu>
